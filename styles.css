@@ -1,0 +1,348 @@
+:root {
+  --frost-white: #f7f9fa;
+  --glacier-blue: #a9d1e6;
+  --deep-ridge-navy: #1f3b57;
+  --winter-pine-green: #3a5f50;
+  --font-main: "Sunflower", sans-serif;
+}
+
+/* My Base Styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--font-main), Sunflower, cursive;
+  font-size: 1rem;
+  background-color: var(--frost-white);
+  color: var(--deep-ridge-navy);
+  line-height: 1.6;
+}
+
+/* Header Section*/
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--frost-white);
+  padding: 1.5rem 3rem;
+  border-bottom: 2px solid var(--glacier-blue);
+}
+
+header h1{
+  margin: 0;
+}
+
+header h1 a{
+  color: var(--deep-ridge-navy);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a{
+  color: var(--deep-ridge-navy);
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav a:hover,
+nav a:focus{
+  color: var(--winter-pine-green);
+}
+
+/* Hero Image (Edit Version #16) - This is finally working on both pages. (DO NOT CHANGE) */
+.hero-image{
+  width: 100%;
+  background-color: var(--glacier-blue);
+  padding: 2rem 0;
+}
+
+.hero-image img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+/* My Main Section */
+main{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+main h2{
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background-color: var(--winter-pine-green);
+  color: var(--frost-white);
+  padding: 1rem;
+  display: inline-block;
+  min-width: 400px;
+  border-radius: 5px;
+}
+
+main > h2{
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+main > p{
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+/* My Amenities and Chalet Sections */
+#amenities,
+.chalet{
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
+
+#amenities img,
+.chalet img{
+  flex: 0 0 45%;
+  max-width: 500px;
+  height: auto;
+  background-color: var(--glacier-blue);
+  border-radius: 5px;
+}
+
+#amenities div,
+.chalet div{
+  flex: 1;
+}
+
+#amenities h3,
+.chalet h3{
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  background-color: var(--winter-pine-green);
+  color: var(--frost-white);
+  padding: 0.75rem;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+#amenities p,
+.chalet p{
+  line-height: 1.8;
+  text-align: left;
+  margin: 0;
+}
+
+/* Contact Page Section (CLASS) */
+.contact-intro{
+  text-align: left;
+  margin-bottom: 2rem;
+  margin-top: 50px;
+  max-width: 100%;
+}
+
+.contact-intro h2{
+  background-color: var(--winter-pine-green);
+  color: var(--frost-white);
+  padding: 1rem;
+  display: inline-block;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.contact-intro p{
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.contact-content{
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-content figure{
+  flex: 0 0 40%;
+  margin: 0;
+}
+
+.contact-content figure img{
+  width: 100%;
+  height: auto;
+  background-color: var(--glacier-blue);
+  border-radius: 5px;
+}
+
+.contact-content form{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* My Form Styles - Version (#22) Form Checked. Invalid Checked. DO NOT CHANGE.  */
+form fieldset{
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form fieldset legend{
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+form label{
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+form fieldset:has(input[type="radio"]){
+  background-color: var(--frost-white);
+  border: 2px solid var(--glacier-blue);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+form fieldset:has(input[type="radio"]) label{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--glacier-blue);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: var(--font-main), sans-serif;
+}
+
+input[type="radio"]{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+textarea{
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus{
+  outline: none;
+  border-color: var(--winter-pine-green);
+  background-color: #eef6f9;
+}
+
+button[type="submit"]{
+  background-color: var(--winter-pine-green);
+  color: var(--frost-white);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus{
+  background-color: var(--deep-ridge-navy);
+}
+
+/* Footer..ThE END FINALLY...*/
+footer{
+  background-color: var(--glacier-blue);
+  color: var(--deep-ridge-navy);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+footer p{
+  margin: 0.5rem 0;
+}
+
+.contact-layout{
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-left{
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-left figure{
+  margin: 0;
+}
+
+.contact-left figure img{
+  width: 100%;
+  height: auto;
+}
+
+.contact-layout form{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-intro{
+  text-align: left;
+  margin: 0;
+}
+
+/* After Youtube Research, this is important: Media Query and Flex-direction change to fix additional problems. */
+@media (max-width: 768px){
+  #amenities,
+  .chalet,
+  .contact-content{
+    flex-direction: column;
+  }
+
+  #amenities img,
+  .chalet img,
+  .contact-content figure{
+    flex: 1;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+}
